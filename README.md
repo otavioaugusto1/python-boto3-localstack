@@ -13,31 +13,29 @@ localstack-demo/
 
 └── test.txt
 
+## Comandos básicos
 
-
-
-
-# Listar serviços disponíveis
+### Listar serviços disponíveis
 ```
 localstack status services
 ```
 
-# Ver logs
+### Ver logs
 ```
 localstack logs
 ```
 
-# Parar o LocalStack
+### Parar o LocalStack
 ```
 localstack stop
 ```
 
-# Verificar conteúdo do arquivo:
+### Verificar conteúdo do arquivo:
 ```
 awslocal s3 cp s3://meu-bucket-local/test.txt -
 ```
 
-# Script Python para imprimir os objetos nos Bucket
+### Script Python para imprimir os objetos nos Bucket
 ```
 import boto3
 
@@ -50,11 +48,11 @@ s3_client = boto3.client(
 )
 ```
 
-# Listar objetos no bucket
+### Listar objetos no bucket
 ```
 response = s3_client.list_objects_v2(Bucket='meu-bucket-local')
 ```
-# Imprimir detalhes dos objetos
+### Imprimir detalhes dos objetos
 ```
 for content in response.get('Contents', []):
     print(f"Arquivo: {content['Key']}, Tamanho: {content['Size']} bytes")
