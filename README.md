@@ -4,9 +4,13 @@
 ## Estrutura do projeto
 
 localstack-demo/
+
 │
+
 ├── app.py
+
 ├── requirements.txt
+
 └── test.txt
 
 
