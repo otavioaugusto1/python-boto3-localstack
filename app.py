@@ -23,8 +23,8 @@ def upload_file(file_name, bucket_name):
     s3_client = boto3.client(
         's3', 
         endpoint_url='http://localhost:4566',
-        aws_access_key_id='test',
-        aws_secret_access_key='test',
+        aws_access_key_id=config('AWS_ACCESS_KEY_ID'),
+        aws_secret_access_key=config('AWS_SECRET_ACCESS_KEY'),
         region_name='us-east-1'
     )
     
